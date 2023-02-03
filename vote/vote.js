@@ -12,7 +12,6 @@ const durchschnittBerechnen = () => {
   return votes.reduce((a, b) => a + b, 0) / votes.length;
 };
 
-// Beispielnutzung:
-abstimmen(5);
-abstimmen(7);
-abstimmen(8);
+// abstimmen(5);
+// abstimmen(7);
+// abstimmen(8);
