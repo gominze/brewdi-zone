@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let votes = [];
+
+      const abstimmen = (wert) => {
+        votes.push(wert);
+        document.getElementById(
+          "result"
+        ).innerHTML = `Der Durchschnittswert aller bisherigen Votes ist ${durchschnittBerechnen()}.`;
+      };
+
+      const durchschnittBerechnen = () => {
+        return votes.reduce((a, b) => a + b, 0) / votes.length;
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="voteInput">Dein Vote:</label>
+      <input type="number" id="voteInput" min="1" max="10" />
+      <button
+        type="button"
+        onclick="abstimmen(document.getElementById('voteInput').value)"
+      >
+        Ab dafür
+      </button>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
