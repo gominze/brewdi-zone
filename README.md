@@ -4,4 +4,7 @@
 
 > 03.02.2023
 
-- Testeintrag
+- Hausmeisterei Github
+- first touch Registrations/Landingpage
+- Team Meeting
+-
