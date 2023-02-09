@@ -16,5 +16,12 @@
 > 08.02.2023
 
 - Anforderungsanalyse
-- Docker Setup für Anular, Node, Express
-- Teammeeting(s)
+- Docker Setup für Angular, Node, Express
+- Teammeeting
+- Angular Basics
+- Docker Basics
+- Verhaltenskodex
+
+> 09.02.2023
+
+-
