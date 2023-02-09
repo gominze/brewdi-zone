@@ -24,4 +24,5 @@
 
 > 09.02.2023
 
--
+- Anforderungsanalyse finalized
+- Abgabe Mileston I vorbereitung
