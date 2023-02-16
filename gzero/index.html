@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <title>Hoeness reg</title>
   </head>
   <body>
-    <header>
-      <h1>gzero</h1>
-    </header>
-    <main>
-      <div id="app"></div>
-    </main>
-    <script src="/app.js"></script>
+    <h1>Sei nicht dumm, sei kein Hoeness</h1>
+    <form id="registrationForm" method="post">
+      <label for="firstName">Vorname:</label>
+      <input type="text" name="firstName" id="firstName" required /><br /><br />
+      <label for="lastName">Name:</label>
+      <input type="text" name="lastName" id="lastName" required /><br /><br />
+      <label for="course">Kurs:</label>
+      <select name="course" id="course" required>
+        <option value="">Bitte wählen</option>
+        <option value="AZURE 01/2022">AZURE 01/2022</option>
+        <option value="AZURE 03/2022">AZURE 03/2022</option>
+        <option value="AWS 07/2022">AWS 07/2022</option>
+        <option value="GC 10/2022">GC 10/2022</option>
+        <option value="Clean Code 01/2023">Clean Code 01/2023</option></select
+      ><br /><br />
+      <input type="submit" value="Registrieren" />
+    </form>
   </body>
 </html>
