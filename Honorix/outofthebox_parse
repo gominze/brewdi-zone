@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- This is the minified production version of parse js -->
+    <!-- <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script> -->
+  </head>
+  <body>
+    <h1>JS SDK</h1>
+    <input id="number" type="number" placeholder="Number (1-10)" />
+    <button id="saveButton">Save Number</button>
+  </body>
+  <script>
+    // Initialize Parse
+    Parse.initialize(
+      "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe",
+      "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp"
+    ); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    // Save a new number
+    async function saveNumber() {
+      // Get the number value from the input field
+      const number = document.getElementById("number").value;
+
+      // Validate the number to be between 1 and 10
+      if (number < 1 || number > 10) {
+        alert("Please enter a number between 1 and 10.");
+        return;
+      }
+
+      // Creates a new Parse "Number" object, which is created by default in your Parse app
+      const Number = Parse.Object.extend("Number");
+      const newNumber = new Number();
+
+      // Set the number value to the new "Number" object
+      newNumber.set("value", parseInt(number, 10));
+
+      try {
+        // Call the save method, which returns the saved object if successful
+        const savedNumber = await newNumber.save();
+        if (savedNumber !== null) {
+          // Notify the success by getting the attributes from the "Number" object, by using the get method (the id attribute needs to be accessed directly, though)
+          alert(
+            `Number saved with success! ObjectId: ${
+              savedNumber.id
+            }, Value: ${savedNumber.get("value")}`
+          );
+        }
+      } catch (error) {
+        alert(`Error: ${error.message}`);
+      }
+    }
+
+    // Add on click listener to call the save number function
+    document
+      .getElementById("saveButton")
+      .addEventListener("click", async function () {
+        saveNumber();
+      });
+  </script>
+</html>
