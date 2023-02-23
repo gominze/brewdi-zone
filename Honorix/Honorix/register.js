@@ -30,8 +30,25 @@ document
     }
 
     // Sendet die Daten an die Back4App Datenbank
-    Parse.initialize = "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe";
-    Parse.serverURL = "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp";
+
+    // Parse.initialize = "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe";
+    // Parse.serverURL = "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp";
+
+    Parse.initialize(
+      "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe",
+      "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp"
+    );
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    // window.onload = function () {
+    //   Parse.initialize(
+    //     "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe",
+    //     "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp"
+    //   );
+    //   Parse.serverURL = "https://parseapi.back4app.com/";
+
+    // };
+
     const Registration = Parse.Object.extend("Registration");
     const newRegistration = new Registration();
 
