@@ -34,6 +34,8 @@ document
     // Parse.initialize = "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe";
     // Parse.serverURL = "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp";
 
+    // const Parse = require("parse/node");
+
     Parse.initialize(
       "2Nci95rXG9BCXLTCnvEyhzTvqeY9FkyCHxxkINAe",
       "JwOlY3bEpYslTtpYlTUH0bvUh8P4KHOC9yp4dSdp"
